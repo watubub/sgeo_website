@@ -1,0 +1,338 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Navigation Bar */
+
+nav {
+  z-index: 2;
+  width: 100vw;
+  padding: 10px 3%;
+  position: fixed;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+nav h2 a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+nav img {
+  float: left;
+  padding-right: 10px;
+  height: 2rem;
+}
+
+nav ul {
+  list-style-type: none;
+  float: right;
+}
+
+nav li {
+  padding: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  border-bottom: 2px solid rgba(250, 0, 0, 0);
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav li:hover {
+  border-bottom: 2px solid currentColor;
+}
+
+/* BANNER START */
+
+.banner {
+  width: 100vw;
+  height: 100vh;
+  background: url(./images/banner.jpg) center/cover fixed no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 40, 0.9);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  row-gap: 80px;
+}
+
+.title {
+  flex: 100%;
+  z-index: 1;
+  font-size: 4rem;
+  color: #ddd;
+  font-weight: bold;
+}
+
+.banner_buttons {
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button {
+  background: #ddd;
+  border-radius: 20px;
+  padding: 20px 45px;
+  font-size: 1.2rem;
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: rgb(0, 0, 30);
+}
+
+.button:hover {
+  background: rgb(0, 0, 30);
+  color: #ddd;
+  border: 2px solid #ddd;
+  transition: 0.5s;
+  box-sizing: border-box;
+}
+
+.button:not(:hover) {
+  transition: 0.5s;
+}
+/* BANNER END */
+
+body {
+  background: rgba(128, 128, 128, 0);
+}
+.content {
+  line-height: 150%;
+  padding: 0px 30px;
+  background: rgba(255, 255, 255, 0);
+  max-width: 1050px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  height: 50px;
+  color: white;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+h3 {
+  font-size: 2rem;
+  color: rgb(0, 0, 100);
+  padding-bottom: 20px;
+  line-height: 100%;
+}
+
+#about_title {
+  text-align: center;
+}
+
+article {
+  padding: 60px 10px 0px;
+}
+
+/* About Section */
+
+.about_box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.box {
+  width: 100%;
+  /* background: rgba(0, 0, 255, 0.404); */
+  border: 3px solid navy;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.about p {
+  font-size: 1.25rem;
+}
+
+/* .gloss {
+  background-image: linear-gradient(
+    135deg,
+    #ffffff28 0%,
+    #ffffff5e 37.5%,
+    #ffffff65 75%,
+    #ffffff00 100%
+  );
+} */
+
+/* Resources Section */
+
+.icon {
+  width: 100%;
+  height: 128px;
+  object-fit: contain;
+}
+
+.resource_link {
+  text-decoration: none;
+  color: black;
+}
+
+.resource_box {
+  width: 128px;
+  text-align: center;
+  line-height: 200%;
+  list-style-type: none;
+}
+
+.resource_list {
+  width: 90%;
+  display: flex;
+  gap: 42px;
+  flex-flow: wrap;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resource_box:hover {
+  transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact_container {
+  display: flex;
+}
+
+.contact_form {
+  flex: 50%;
+  padding-right: 10px;
+}
+
+.contact_info {
+  flex: 50%;
+  padding-left: 10px;
+}
+
+.required:after {
+  content: " *";
+  color: red;
+}
+
+/* work in progress */
+.formbox {
+  text-align: left;
+  width: 100%;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #004;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* footer */
+
+footer {
+  margin-top: 60px;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 3rem;
+  }
+  .button {
+    font-size: 1rem;
+    padding: 15px 35px;
+  }
+  .contact_form {
+    flex: 100%;
+    order: 2;
+    padding-top: 30px;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  .contact_container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .title {
+    font-size: 2.3rem;
+  }
+  .button {
+    padding: 15px 27px;
+  }
+}
